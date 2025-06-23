@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <style>
+        /* Reset e estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        /* Navegação */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #34495e;
+            padding: 0.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+        }
+        
+        nav a:hover {
+            background: #2c3e50;
+            border-radius: 4px;
+        }
+        
+        /* Conteúdo principal */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Sobre mim */
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 2rem;
+            object-fit: cover;
+        }
+        
+        /* Projetos */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #2c3e50;
+            color: white;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .about img {
+                margin: 0 0 1rem 0;
+            }
+            
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a {
+                margin: 0.25rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Portfólio</h1>
+        <p>Desenvolvedor Web | Designer | Fotógrafo</p>
+    </header>
+    
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    
+    <div class="container">
+        <section id="sobre" class="about">
+            <img src="https://via.placeholder.com/150" alt="Minha Foto">
+            <div>
+                <h2>Sobre Mim</h2>
+                <p>Olá! Meu nome é [Seu Nome]. Sou um profissional apaixonado por [sua área] com experiência em [suas habilidades]. Adoro criar soluções criativas e eficientes para problemas complexos.</p>
+                <p>Quando não estou trabalhando, gosto de [seus hobbies/interesses].</p>
+            </div>
+        </section>
+        
+        <section id="projetos">
+            <h2>Meus Projetos</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição breve do projeto e tecnologias utilizadas.</p>
+                    <a href="#">Ver mais</a>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Projeto 2">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição breve do projeto e tecnologias utilizadas.</p>
+                    <a href="#">Ver mais</a>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Projeto 3">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição breve do projeto e tecnologias utilizadas.</p>
+                    <a href="#">Ver mais</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML5, CSS3, JavaScript</li>
+                <li>React, Vue ou Angular</li>
+                <li>Design Responsivo</li>
+                <li>UI/UX Design</li>
+                <li>Fotografia e Edição</li>
+            </ul>
+        </section>
+        
+        <section id="contato">
+            <h2>Contato</h2>
+            <form>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem"></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Meu Portfólio. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
